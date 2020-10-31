@@ -1,8 +1,8 @@
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser
 from django.db import models
 
 
-class UserNet(AbstractUser):
+class UserNet(AbstractBaseUser):
     """Custom user model"""
     middle_name = models.CharField(max_length=50)
     firs_login = models.DateTimeField(null=True)
