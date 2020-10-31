@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env bashs
 
 sleep 10;
 python manage.py migrate
