@@ -17,4 +17,5 @@ COPY ./entrypoint.sh .
 
 COPY . .
 
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]t
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+# ENTRYPOINT sh /usr/src/app/entrypoint.sh
