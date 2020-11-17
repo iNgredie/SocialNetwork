@@ -6,13 +6,15 @@ from .models import UserNet
 class GetUserNetSerializer(serializers.ModelSerializer):
     """ Вывод инфо о user
     """
+    avatar = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = UserNet
         exclude = (
             'password',
             'last_login',
             'is_active',
-            'is_stuff',
+            'is_staff',
             'is_superuser',
             'groups',
             'user_permissions'
@@ -27,11 +29,11 @@ class GetUserNetPublicSerializer(serializers.ModelSerializer):
         exclude = (
             'email',
             'password',
-            'phone'
+            'phone',
             'last_login',
             'is_active',
-            'is_stuff',
+            'is_staff',
             'is_superuser',
             'groups',
-            'user_permissions'
+            'user_permissions',
          )
